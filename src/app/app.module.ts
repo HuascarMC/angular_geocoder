@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { GeocoderComponent } from './geocoder/geocoder.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GeocoderComponent
   ],
   imports: [
     BrowserModule,
