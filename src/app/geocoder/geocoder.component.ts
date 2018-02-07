@@ -20,7 +20,8 @@ export class GeocoderComponent implements OnInit {
   this.http.get(
   'https://maps.googleapis.com/maps/api/geocode/json?address='
    + this.address + '&key=' + this.api_key).subscribe(data => {
-    console.log(this.address)
+    this.lat = data.results[0].geometry.location.lat;
+    this.lng = data.results[0].geometry.location.lng;
     console.log(data);
    });
  }
