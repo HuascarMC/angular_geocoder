@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
 import { GeocoderComponent } from './geocoder.component';
 
 describe('GeocoderComponent', () => {
@@ -8,6 +8,7 @@ describe('GeocoderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ FormsModule ],
       declarations: [ GeocoderComponent ]
     })
     .compileComponents();
@@ -19,7 +20,13 @@ describe('GeocoderComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  // xit('should create', () => {
+  //   expect(component).toBeTruthy();
+  // });
+
+  it(`should have as 'address' property`, async(() => {
+    const fixture = TestBed.createComponent(GeocoderComponent);
+    const GeocoderComponent = fixture.debugElement.componentInstance;
+    expect(GeocoderComponent.address).toEqual(null);
+  }));
 });
