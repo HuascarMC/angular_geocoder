@@ -2,16 +2,26 @@
  background-color: white;
  display: flex;
  align-items: center;
- width: 1000px;
- padding: 100px;
+ width: 800px;
+ padding: 150px 100px 100px 100px;
  border-radius: 7px;
- margin: 350px auto;
+ margin: 150px auto;
 }
 
 ul {
   text-align: left;
   font-size: 12px;
-  margin: 0px auto;
+  margin: 0px;
   display: inline-block;
   list-style: none;
+}
+
+input {
+    vertical-align: top;
+    margin: 15px;
+    border-radius: 7px;
+    border-width: 1px;
+    padding: 12px;
+    width: 700px;
+    font-size: 12px
 }
