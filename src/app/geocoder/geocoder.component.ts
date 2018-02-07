@@ -12,16 +12,26 @@ export class GeocoderComponent implements OnInit {
   address: string = null;
   lat: string = null;
   lng: string = null;
-  api_key: string = 'AIzaSyDaWjtIBo52j7qrtJKsr7ykERqQ5MywinE'
+  api_key: string = 'AIzaSyDaWjtIBo52j7qrtJKsr7ykERqQ5MywinE';
+  searchCount = 0;
 
   constructor(private http: HttpClient) { }
 
+  makeRequest(): void {
+   this.http.get(
+   'https://maps.googleapis.com/maps/api/geocode/json?address='
+    + this.address + '&key=' + this.api_key).subscribe(data => {
+     this.lat = data.results[0].geometry.location.lat;
+     this.lng = data.results[0].geometry.location.lng;
+     console.log(data);
+    });
+  }
+
   ngOnInit(): void {
-  this.http.get(
-  'https://maps.googleapis.com/maps/api/geocode/json?address='
-   + this.address + '&key=' + this.api_key).subscribe(data => {
-    this.lat = data.results[0].geometry.location.lat;
-    this.lng = data.results[0].geometry.location.lng;
-    console.log(data);
-   });
+    if (this.searchCount > 0) {
+     this.makeRequest();
+    }
+    this.searchCount = this.searchCount + 1;
+    console.log(this.searchCount)
+  }
  }
