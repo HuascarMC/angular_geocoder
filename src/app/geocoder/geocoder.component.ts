@@ -12,12 +12,15 @@ export class GeocoderComponent implements OnInit {
   address: string = null;
   lat: string = null;
   lng: string = null;
+  api_key: string = 'AIzaSyDaWjtIBo52j7qrtJKsr7ykERqQ5MywinE'
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   this.http.get(
-  'https://maps.googleapis.com/maps/api/geocode/json?address=Edinburgh&key=AIzaSyDaWjtIBo52j7qrtJKsr7ykERqQ5MywinE').subscribe(data => {
+  'https://maps.googleapis.com/maps/api/geocode/json?address='
+   + this.address + '&key=' + this.api_key).subscribe(data => {
+    console.log(this.address)
     console.log(data);
    });
  }

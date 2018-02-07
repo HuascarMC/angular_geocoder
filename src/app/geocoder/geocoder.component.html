@@ -6,7 +6,7 @@
     <li><input type="text" placeholder="Address" name="" [(ngModel)]="address" [ngModelOptions]="{standalone: true}"></li>
     <li><input type="text" placeholder="Latitude" name="" value="{{ lat }}"></li>
     <li><input type="text" placeholder="Longitude" name="" value="{{ lng }}"></li>
-    <input class="hidden-btn" type="submit" name="item">
+    <input class="hidden-btn" type="submit" name="item" (click)='ngOnInit()'>
   </ul>
  </form>
 </div>
