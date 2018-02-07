@@ -39,7 +39,7 @@ describe('GeocoderComponent', () => {
   }));
 
 
-  xit(`should have as 'lng' property`, async(() => {
+  it(`should have as 'lng' property`, async(() => {
     // const fixture = TestBed.createComponent(GeocoderComponent);
     const GeocoderComponent = fixture.debugElement.componentInstance;
     expect(GeocoderComponent.lng).toEqual(undefined);
