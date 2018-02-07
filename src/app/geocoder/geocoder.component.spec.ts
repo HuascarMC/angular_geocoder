@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { GeocoderComponent } from './geocoder.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('GeocoderComponent', () => {
   let component: GeocoderComponent;
@@ -8,7 +9,7 @@ describe('GeocoderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ FormsModule ],
+      imports: [ FormsModule, HttpClientModule ],
       declarations: [ GeocoderComponent ]
     })
     .compileComponents();
@@ -25,8 +26,22 @@ describe('GeocoderComponent', () => {
   // });
 
   it(`should have as 'address' property`, async(() => {
-    const fixture = TestBed.createComponent(GeocoderComponent);
+    // const fixture = TestBed.createComponent(GeocoderComponent);
     const GeocoderComponent = fixture.debugElement.componentInstance;
-    expect(GeocoderComponent.address).toEqual(null);
+    expect(GeocoderComponent.address).toEqual(undefined);
+  }));
+});
+
+  it(`should have as 'address' property`, async(() => {
+    // const fixture = TestBed.createComponent(GeocoderComponent);
+    const GeocoderComponent = fixture.debugElement.componentInstance;
+    expect(GeocoderComponent.address).toEqual(undefined);
+  }));
+});
+
+  it(`should have as 'address' property`, async(() => {
+    // const fixture = TestBed.createComponent(GeocoderComponent);
+    const GeocoderComponent = fixture.debugElement.componentInstance;
+    expect(GeocoderComponent.address).toEqual(undefined);
   }));
 });
