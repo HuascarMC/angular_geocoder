@@ -22,9 +22,14 @@ export class GeocoderComponent implements OnInit {
    this.http.get(
    'https://maps.googleapis.com/maps/api/geocode/json?address='
     + this.address + '&key=' + this.api_key).subscribe(data => {
-     this.lat = (data.results[0].geometry.location.lat).toString();
-     this.lng = (data.results[0].geometry.location.lng).toString();
-     console.log(data);
+      if(data.status != "ZERO_RESULTS") {
+        this.lat = (data.results[0].geometry.location.lat).toString();
+        this.lng = (data.results[0].geometry.location.lng).toString();
+        this.error = ''
+        console.log(data);
+      } else {
+       this.error = 'Not found'
+      }
     });
   }
 
