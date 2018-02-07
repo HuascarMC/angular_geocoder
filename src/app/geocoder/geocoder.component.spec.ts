@@ -50,4 +50,18 @@ describe('GeocoderComponent', () => {
     const GeocoderComponent = fixture.debugElement.componentInstance;
     expect(GeocoderComponent.api_key).toEqual('AIzaSyDaWjtIBo52j7qrtJKsr7ykERqQ5MywinE');
   }));
+
+  it(`should have has 'error' property`, async(() => {
+    // const fixture = TestBed.createComponent(GeocoderComponent);
+    const GeocoderComponent = fixture.debugElement.componentInstance;
+    expect(GeocoderComponent.error).toEqual('');
+  }));
+
+  it(`should have has 'searchCount' property`, async(() => {
+    // const fixture = TestBed.createComponent(GeocoderComponent);
+    const GeocoderComponent = fixture.debugElement.componentInstance;
+    expect(GeocoderComponent.searchCount).toEqual(1);
+  }));
+
+
 });
