@@ -3,10 +3,10 @@
  display: flex;
  align-items: center;
  width: 800px;
- padding: 150px 100px 100px 100px;
+ padding: 100px;
  padding-bottom: 0px;
  border-radius: 7px;
- margin: 150px auto;
+ margin: 180px auto;
 }
 
 ul {
@@ -20,11 +20,11 @@ ul {
 input {
     vertical-align: top;
     margin: 15px;
-    border-radius: 7px;
-    border-width: 1px;
+    border: 1.2px solid rgb(203, 218, 222);
+    border-radius: 5px;
     padding: 12px;
     width: 700px;
-    font-size: 12px
+    font-size: 12px;
 }
 
 .br-line {
