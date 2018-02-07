@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-geocoder',
@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./geocoder.component.scss']
 })
 export class GeocoderComponent implements OnInit {
+
+  address: string = null;
+  lat: string = null;
+  lng: string = null;
+  err: string = null;
 
   constructor() { }
 
