@@ -30,18 +30,18 @@ describe('GeocoderComponent', () => {
     const GeocoderComponent = fixture.debugElement.componentInstance;
     expect(GeocoderComponent.address).toEqual(undefined);
   }));
-});
 
-  it(`should have as 'address' property`, async(() => {
+
+  it(`should have as 'lat' property`, async(() => {
     // const fixture = TestBed.createComponent(GeocoderComponent);
     const GeocoderComponent = fixture.debugElement.componentInstance;
-    expect(GeocoderComponent.address).toEqual(undefined);
+    expect(GeocoderComponent.lat).toEqual(undefined);
   }));
-});
 
-  it(`should have as 'address' property`, async(() => {
+
+  xit(`should have as 'lng' property`, async(() => {
     // const fixture = TestBed.createComponent(GeocoderComponent);
     const GeocoderComponent = fixture.debugElement.componentInstance;
-    expect(GeocoderComponent.address).toEqual(undefined);
+    expect(GeocoderComponent.lng).toEqual(undefined);
   }));
 });
