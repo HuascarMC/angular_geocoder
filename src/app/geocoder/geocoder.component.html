@@ -2,6 +2,7 @@
 
  <form class="geocoder-form">
   <ul>
+    <p id="error">{{ error }}<p>
     <li><br><hr class="br-line"></li>
     <li><input type="text" placeholder="Address" name="" [(ngModel)]="address" [ngModelOptions]="{standalone: true}"></li>
     <li><input type="text" placeholder="Latitude" name="" value="{{ lat }}"></li>
