@@ -1,6 +1,6 @@
 # AngularGeocoder
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.7.
+This project was generated with [Angular CLI], it's a simple geocoder that shows the coordinates for a given address using a Google Maps API.(https://github.com/angular/angular-cli) version 1.6.7.
 
 ## Development server
 
